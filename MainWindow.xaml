@@ -1,0 +1,62 @@
+﻿<Window x:Class="Calc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calc"
+        mc:Ignorable="d" FontSize="35"
+        Title="MainWindow" Height="550" Width="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Border x:Name="borderDisplay" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" BorderBrush="DarkGray" BorderThickness="1" Margin="2">
+            <ScrollViewer x:Name="scrollViewerDisplay" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="textBlockDisplay" Margin="2" HorizontalAlignment="Right" VerticalAlignment="Center" />
+            </ScrollViewer>
+        </Border>
+
+        <Button x:Name="button1" Grid.Column="0" Grid.Row="4" Content="1" Margin="2" Click="buttonNumeric_Click"/>
+        <Button x:Name="button2" Grid.Column="1" Grid.Row="4" Content="2" Margin="2" Click="buttonNumeric_Click"/>
+        <Button x:Name="button3" Grid.Column="2" Grid.Row="4" Content="3" Margin="2" Click="buttonNumeric_Click"/>
+        <Button x:Name="button4" Grid.Column="0" Grid.Row="3" Content="4" Margin="2" Click="buttonNumeric_Click"/>
+        <Button x:Name="button5" Grid.Column="1" Grid.Row="3" Content="5" Margin="2" Click="buttonNumeric_Click"/>
+        <Button x:Name="button6" Grid.Column="2" Grid.Row="3" Content="6" Margin="2" Click="buttonNumeric_Click"/>
+        <Button x:Name="button7" Grid.Column="0" Grid.Row="2" Content="7" Margin="2" Click="buttonNumeric_Click"/>
+        <Button x:Name="button8" Grid.Column="1" Grid.Row="2" Content="8" Margin="2" Click="buttonNumeric_Click"/>
+        <Button x:Name="button9" Grid.Column="2" Grid.Row="2" Content="9" Margin="2" Click="buttonNumeric_Click"/>
+        <Button x:Name="button0" Grid.Column="1" Grid.Row="5" Content="0" Margin="2" Click="buttonNumeric_Click"/>
+
+        <Button x:Name="buttonPlusMinus" Grid.Column="0" Grid.Row="5" Content="+/-" Margin="2" Click="buttonPlusMinus_Click"/>
+        <Button x:Name="buttonDot" Grid.Column="2" Grid.Row="5" Content="." Margin="2" Click="buttonDot_Click"/>
+
+        <Button x:Name="buttonSqrt" Grid.Column="3" Grid.Row="1" Content="&#8730;" Margin="2" Click="buttonSqrt_Click"/>
+        <Button x:Name="buttonDiv" Grid.Column="3" Grid.Row="2" Content="/" Margin="2" Click="buttonOperation_Click"/>
+        <Button x:Name="buttonMul" Grid.Column="3" Grid.Row="3" Content="*" Margin="2" Click="buttonOperation_Click"/>
+        <Button x:Name="buttonSub" Grid.Column="3" Grid.Row="4" Content="-" Margin="2" Click="buttonOperation_Click"/>
+        <Button x:Name="buttonAdd" Grid.Column="3" Grid.Row="5" Content="+" Margin="2" Click="buttonOperation_Click"/>
+        <Button x:Name="buttonSolve" Grid.Column="4" Grid.Row="5" Content="=" Margin="2" Click="buttonSolve_Click"/>
+
+        <Button x:Name="buttonMemoryClear" Grid.Column="4" Grid.Row="1" Content="MC" Margin="2" Click="buttonMemoryClear_Click"/>
+        <Button x:Name="buttonMemoryRecall" Grid.Column="4" Grid.Row="2" Content="MR" Margin="2" Click="buttonMemoryRecall_Click"/>
+        <Button x:Name="buttonMemoryMinus" Grid.Column="4" Grid.Row="3" Content="M-" Margin="2" Click="buttonMemoryMinus_Click"/>
+        <Button x:Name="buttonMemoryPlus" Grid.Column="4" Grid.Row="4" Content="M+" Margin="2" Click="buttonMemoryPlus_Click"/>
+        
+        <Button x:Name="buttonAC" Grid.Column="0" Grid.Row="1" Content="AC" Margin="2" Click="buttonAC_Click"/>
+        <Button x:Name="buttonEC" Grid.Column="1" Grid.Row="1" Content="EC" Margin="2" Click="buttonEC_Click"/>
+    </Grid>
+</Window>
